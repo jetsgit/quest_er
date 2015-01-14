@@ -39,3 +39,6 @@ Run migrations, enjoy life, be happy.
 
 ![User Show Page](app/assets/images/quest_er_user-show.png)
 
+[Copyright]( http://jet.mit-license.org/ ) by Jerrold R Thompson 
+
+
