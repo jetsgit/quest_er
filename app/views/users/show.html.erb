@@ -1,0 +1,14 @@
+<h2>
+  The following are articles that I have contributed to:
+</h2>
+<% require 'pry'; binding.pry %>
+<% @questions.each do |q| %>
+  <h3>Question:</h3>
+  <p>
+    <%= q.question %>
+  </p>
+  <h3>Answer:</h3>
+  <p>
+    <%= q.answer %>
+  </p>
+<% end %>

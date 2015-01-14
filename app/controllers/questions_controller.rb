@@ -23,13 +23,23 @@ class QuestionsController < ApplicationController
 
   def create
     @question = Question.new(question_params)
-    @question.save
-    respond_with(@question)
+    if @question.save
+      @question.users << current_user
+      respond_with(@question)
+    else 
+      render action: 'new'
+    end
+    
   end
 
   def update
-    @question.update(question_params)
-    respond_with(@question)
+    if @question.update(question_params)
+      @question.users << current_user
+      respond_with(@question)
+    else 
+      render action: 'edit'
+    end
+    
   end
 
   def destroy

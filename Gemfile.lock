@@ -34,6 +34,12 @@ GEM
       columnize (~> 0.8)
       debugger-linecache (~> 1.2)
       slop (~> 3.6)
+    capybara (2.4.4)
+      mime-types (>= 1.16)
+      nokogiri (>= 1.3.3)
+      rack (>= 1.0.0)
+      rack-test (>= 0.5.4)
+      xpath (~> 2.0)
     coderay (1.1.0)
     coffee-rails (4.0.1)
       coffee-script (>= 2.2.0)
@@ -54,6 +60,7 @@ GEM
     erubis (2.7.0)
     execjs (2.2.2)
     hike (1.2.3)
+    hirb (0.7.2)
     i18n (0.7.0)
     jbuilder (2.2.6)
       activesupport (>= 3.0.0, < 5)
@@ -67,8 +74,25 @@ GEM
       treetop (~> 1.4.8)
     method_source (0.8.2)
     mime-types (1.25.1)
+    mini_portile (0.6.2)
     minitest (5.5.1)
+    minitest-capybara (0.7.1)
+      capybara (~> 2.2)
+      minitest (~> 5.0)
+      rake
+    minitest-metadata (0.5.3)
+      minitest (>= 4.7, < 6.0)
+    minitest-rails (2.1.1)
+      minitest (~> 5.4)
+      railties (~> 4.1)
+    minitest-rails-capybara (2.1.1)
+      capybara (~> 2.0)
+      minitest-capybara (~> 0.7.0)
+      minitest-metadata (~> 0.5.0)
+      minitest-rails (~> 2.1)
     multi_json (1.10.1)
+    nokogiri (1.6.5)
+      mini_portile (~> 0.6.0)
     orm_adapter (0.5.0)
     polyglot (0.3.5)
     pry (0.10.1)
@@ -113,7 +137,6 @@ GEM
       json (~> 1.7, >= 1.7.7)
       rdoc (~> 4.0)
     slop (3.6.0)
-    spring (1.2.0)
     sprockets (2.12.3)
       hike (~> 1.2)
       multi_json (~> 1.0)
@@ -139,6 +162,8 @@ GEM
       json (>= 1.8.0)
     warden (1.2.3)
       rack (>= 1.0)
+    xpath (2.0.0)
+      nokogiri (~> 1.3)
 
 PLATFORMS
   ruby
@@ -146,14 +171,15 @@ PLATFORMS
 DEPENDENCIES
   coffee-rails (~> 4.0.0)
   devise
+  hirb
   jbuilder (~> 2.0)
   jquery-rails
+  minitest-rails-capybara
   pry-byebug
   pry-rails
   rails (= 4.1.8)
   sass-rails (~> 4.0.3)
   sdoc (~> 0.4.0)
-  spring
   sqlite3
   turbolinks
   uglifier (>= 1.3.0)

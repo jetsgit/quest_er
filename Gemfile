@@ -13,9 +13,14 @@ gem 'turbolinks'
 gem 'devise'
 
 group :development do
- gem 'spring' 
+ # gem 'spring' 
  gem 'pry-rails'
  gem 'pry-byebug'
+ gem 'hirb'
+end
+
+group :development, :test do
+  gem 'minitest-rails-capybara'
 end
 
 # Use ActiveModel has_secure_password
